@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useRef } from "react";
 import { TodoList } from "./components/TodoList";
-import { V4 as uuidv4} from "uuid/v4"
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 export function App() {
@@ -20,13 +21,12 @@ export function App() {
 
         todoTaskRef.current.value = null
 
-
     }
 
 
     return (
         <Fragment>
-            <TodoList todos= {todos} />
+            <TodoList todos= {todos}/>
             <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea"/>
             <button onClick={handleTodoAdd}>✔️​</button>
             <button>​❌​</button>
